@@ -142,12 +142,30 @@ def addPlanet():
             tempFlora = [floraInput, floraResource]
             newPlanet['flora'].append(tempFlora)
     
+    planetWater = input("Enter Planet Water Status (Ex: Safe): ")
+
+    while True:
+        resource = input("Enter Resource name (NA to exit): ")
+        if resource == 'NA':
+            break
+        newPlanet['resources'].append(resource)
+        
+    while True:
+        trait = input("Enter Planet traits (NA to exit): ")
+        if trait == 'NA':
+            break
+        newPlanet['traits'].append(trait)
+        
+    planetHabitable = input("Is this planet habitable (True or False): ")
+    
     newPlanet['actualName'] = actualName
     newPlanet['type'] = planetType
     newPlanet['gravity'] = planetGravity
     newPlanet['temperature'] = planetTemp
     newPlanet['atmosphere'] = planetAtmos
     newPlanet['magnetosphere'] = planetMag
+    newPlanet['water'] = planetWater
+    newPlanet['habitable'] = planetHabitable
     planetJson['Systems'][systemChoice][planetName] = newPlanet
     with open(path, "w") as jsonFile:
             json.dump(planetJson, jsonFile, indent=2)
