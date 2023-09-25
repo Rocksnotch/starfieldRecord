@@ -1,2 +1,1 @@
-# starfieldRecord
-Custom program to store surveyed Starfield Planets
+# The Starfield Surveyed Planet Program
