@@ -175,17 +175,19 @@ def printMenu():
         header()
         print("==Starfield System Tracker Menu==\n")
         print("1: Print all recorded systems")
-        print("2: Add System to Record")
-        print("3: Add Planet to Record")
+        print("2: Print all Planets by System")
+        print("3: Add System to Record")
+        print("4: Add Planet to Record")
+        print("5: Add Moon to Planet")
         print("0: Exit Program")
         userChoice = input("Choice: ")
     
         match userChoice:
             case '1':
                 printSystems()
-            case '2':
-                addSystem()
             case '3':
+                addSystem()
+            case '4':
                 addPlanet()
             case '0':
                 header()
